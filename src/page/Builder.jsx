@@ -67,7 +67,7 @@ function Builder() {
             </header>
             <section className="section1-init-project-builder">
                 <div className="project-builder-drop">
-                    <h3>Project</h3>
+                    <h3 className="drop-head-3">Project</h3>
                     <select name="project" id="project" className="init-project-drop">
                         <option value="maven">Maven</option>
                             <option value="groovy">Gradle-Groovy</option>
@@ -75,7 +75,7 @@ function Builder() {
                     </select>
                 </div>
                 <div className="project-builder-drop">
-                    <h3>Language</h3>
+                    <h3 className="drop-head-3">Language</h3>
                     <select name="project" id="project" className="init-project-drop">
                         <option value="java">Java</option>
                             <option value="groovy">Groovy</option>
@@ -83,7 +83,7 @@ function Builder() {
                     </select>
                 </div>
                 <div className="project-builder-drop">
-                    <h3>Springboot</h3>
+                    <h3 className="drop-head-3">Springboot</h3>
                     <select name="project" id="project" className="init-project-drop">
                         <option value="3.4.12">3.4.12</option>
                             <option value="3.4.13">{"3.4.13 (Snapshot)"}</option>
@@ -99,7 +99,16 @@ function Builder() {
               <h2>Project Metadata</h2>
             </header>
             <section className="section2-init-project-builder">
-
+              <label htmlFor="group">Group</label>
+              <input type="text" value={"com.example"}/>
+              <label htmlFor="group">Artifact</label>
+              <input type="text" value={"demo"}/>
+              <label htmlFor="group">Name</label>
+              <input type="text" value={"demo"}/>
+              <label htmlFor="group">Package</label>
+              <input type="text" value={"com.example.demo"}/>
+              <label htmlFor="group">Description</label>
+              <input type="text" value={"Demo project for springboot"}/>
             </section>
           </form>
           <aside className="dependency-section">
