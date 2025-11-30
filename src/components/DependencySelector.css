@@ -82,6 +82,10 @@
   margin-top: 2px;
 }
 
+.dep-item .type {
+    background-color: none;
+}
+
 .selected-dep-desc,
 .dep-item .desc {
   font-size: 13px;
