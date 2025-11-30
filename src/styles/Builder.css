@@ -55,7 +55,7 @@ nav.navbar-body {
   flex: 1;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px dotted #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 /* ===========================

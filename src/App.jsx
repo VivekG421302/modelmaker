@@ -1,19 +1,52 @@
 import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
-// import ProjectInput from './ProjectInput'
+import ProjectInput from './ProjectInput'
 import Builder from './page/Builder'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [page, setPage] = useState("builder")
 
   return (
     <>
-    <Builder/>
-    {/* <ProjectInput/> */}
+      {/* Page Switcher */}
+      <div style={{display: "flex", gap: "10px" }}>
+        
+        {/* Builder Button */}
+        <button
+          onClick={() => setPage("builder")}
+          style={{
+            padding: "2px 4px",
+            borderRadius: "2px",
+            background: page === "builder" ? "lime" : "#333",
+            color: page === "builder" ? "#000" : "#fff",
+            border: "none",
+            cursor: "pointer"
+          }}
+        >
+          Builder
+        </button>
+
+        {/* ProjectInput Button */}
+        <button
+          onClick={() => setPage("projectinput")}
+          style={{
+            padding: "2px 4px",
+            borderRadius: "2px",
+            background: page === "projectinput" ? "lime" : "#333",
+            color: page === "projectinput" ? "#000" : "#fff",
+            border: "none",
+            cursor: "pointer"
+          }}
+        >
+          Project Input
+        </button>
+
+      </div>
+
+      {/* Render selected component */}
+      {page === "builder" && <Builder />}
+      {page === "projectinput" && <ProjectInput />}
     </>
   )
 }
 
-export default App
+export default App;
