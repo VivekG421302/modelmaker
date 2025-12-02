@@ -28,7 +28,6 @@ button.nav-button {
   -webkit-appearance: none;
 }
 
-
 /* ===========================
 Builder Body
    =========================== */
@@ -94,7 +93,7 @@ button.left-nav-section {
    Part Body Sections
    =========================== */
 
-   .main-body {
+.main-body {
   min-height: 100vw;
   height: auto;
   /* border: 1px solid lime; */
@@ -110,8 +109,10 @@ button.left-nav-section {
   /* border: 1px solid red; */
 }
 
-/* .project-builder-body {
-} */
+.project-builder-body {
+  padding-bottom: 32px;
+  border-bottom: 1px solid #ccc;
+}
 
 form.init-project-builder {
   display: flex;
@@ -128,93 +129,93 @@ form.init-project-builder {
 }
 
 .section1-init-project-builder {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 }
 
 .project-builder-drop {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-.project-builder-drop > h3{
-    font-weight: 200;
+.project-builder-drop > h3 {
+  font-weight: 200;
 }
 
 .init-project-drop {
-    width: 100%;
-    border: none;
-    border: 1px solid #ccc;
-    border-radius: 0;
-    background: #222528;
-    border-radius: 4px;
-    color: #fff;
-    padding: 8px 16px;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    outline: none;
-    cursor: pointer;
-    transition: border-color 0.2s ease;
+  width: 100%;
+  border: none;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  background: #222528;
+  border-radius: 4px;
+  color: #fff;
+  padding: 8px 16px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
 }
 
 .init-project-drop:focus {
-    color: #fff;
-    background-color: #6ab33f;
-    border: none;
+  color: #fff;
+  background-color: #6ab33f;
+  border: none;
 }
 
 /* Options */
 .init-project-drop option {
-    background: #222528;
-    color: white;
+  background: #222528;
+  color: white;
 }
 
 .init-project-drop option:hover {
-    background-color: #6ab33f;
-    color: white;
+  background-color: #6ab33f;
+  color: white;
 }
 
 .init-project-drop option:checked {
-    background-color: #6ab33f;
-    color: white;
+  background-color: #6ab33f;
+  color: white;
 }
 
 .section2-init-project-builder {
-    display: grid;
-    gap: 16px;
-    grid-template-columns: 1fr 4fr;
-    padding-right: 30%;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr 4fr;
+  padding-right: 30%;
 }
 
 label {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    font-weight: 800;
-    font-size: larger;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-weight: 800;
+  font-size: larger;
 }
 
 input {
-    padding: 8px 16px;
-    border: none;
-    border-bottom: 1px solid white;
-    outline: none;
-    background: none;
-    color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  background: none;
+  color: #fff;
 }
 
 input:focus {
-    border-bottom: 1px solid #6ab33f;
+  border-bottom: 1px solid #6ab33f;
 }
 
 aside.dependency-section {
   display: flex;
   flex-direction: column;
   border-left: 1px solid #ccc;
-  padding: 0px 8px;
+  padding: 0px 8px 0px 16px;
 }
 
 header.dependency-section-header {
@@ -226,15 +227,13 @@ header.dependency-section-header {
 }
 
 button.dependency-add-btn {
-    font-weight: 700;
-    font-size: large;
-    background-color: #6ab33f;
-    color: #fff;
-    padding: 8px 16px;
-    border-radius: 6px;
+  font-weight: 700;
+  font-size: large;
+  background-color: #6ab33f;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
 }
-
-
 
 /* .init-project-builder {
     display: flex;
@@ -242,9 +241,73 @@ button.dependency-add-btn {
 } */
 
 .database-builder-body {
+    /* display: flex;
+    flex-direction: column; */
+    border-bottom: 1px solid #ccc;
+    padding-top: 16px;
+    padding-bottom: 32px;
+}
+
+.db-build-meta-init {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #ccc;
+}
+
+.db-build-meta-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+form.db-build-meta-input {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr 4fr;
+  padding-right: 30%;
+}
+
+.db-build-prefrence {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 16px;
+}
+
+.db-prefrence-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.db-build-pref-wrapper {
+    flex: 1;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 4px;
+    /* border: 1px solid #ccc; */
+}
+
+.db-build-pref-opt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0px 16px;
 }
 
 .entity-builder-body {
+}
+
+.entity-field-build-init {
+    display: flex;
+    flex-direction: column;
+}
+
+.entity-build-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
 div.builder-body.light {
@@ -257,7 +320,7 @@ select:focus-visible,
 button:focus-visible,
 button.icon-button:focus-visible,
 button.nav-button:focus-visible {
-    border: 1px solid #6ab33f;
+  border: 1px solid #6ab33f;
   outline: 2px solid #6ab33f;
   outline-offset: 0px;
 }
